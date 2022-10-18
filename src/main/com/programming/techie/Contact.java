@@ -18,19 +18,23 @@ public class Contact {
     public String getLastName() {
         return lastName;
     }
+    
+    public String getPhoneNumber() {
+    	return phoneNumber;
+    }
 
     public void validateFirstName() {
-        if (this.firstName.isBlank())
+        if (this.firstName.trim().isEmpty())
             throw new RuntimeException("First Name Cannot be null or empty");
     }
 
     public void validateLastName() {
-        if (this.lastName.isBlank())
+        if (this.lastName.trim().isEmpty())
             throw new RuntimeException("Last Name Cannot be null or empty");
     }
 
     public void validatePhoneNumber() {
-        if (this.phoneNumber.isBlank()) {
+        if (this.phoneNumber.trim().isEmpty()) {
             throw new RuntimeException("Phone Name Cannot be null or empty");
         }
 
